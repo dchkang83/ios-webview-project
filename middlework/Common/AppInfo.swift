@@ -34,5 +34,8 @@ class AppInfo {
         self.mainInfo?["CFBundleShortVersionString"] as? String
     }
     
-    var url: String = "https://naver.com"
+    // 웹뷰 서버 정보
+    var serverMode = Constants.SERVER_PROD
+    var serverName = Constants.SERVERS[Constants.SERVER_PROD]!["NAME"]!
+    var serverUrl: String = "https://www.google.com"
 }

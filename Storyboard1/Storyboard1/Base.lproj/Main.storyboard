@@ -15,22 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqu-Zf-XSP">
-                                <rect key="frame" x="159" y="409" width="75" height="34.333333333333314"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="hWC-CP-wEe" kind="show" id="LhJ-kH-zkb"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="bqu-Zf-XSP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vf8-5Q-Hzu"/>
-                            <constraint firstItem="bqu-Zf-XSP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XKp-er-JKd"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F08-SG-VFX"/>
                 </viewController>
@@ -59,23 +45,52 @@
         <!--Main View Controller-->
         <scene sceneID="K7w-pU-x5k">
             <objects>
-                <viewController id="hWC-CP-wEe" customClass="MainViewController" customModule="Storyboard1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="hWC-CP-wEe" customClass="MainViewController" customModule="Storyboard1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I5e-6a-suM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeN-zw-xNy" userLabel="View Main">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-CO-BO7" userLabel="View Main Web">
+                                        <rect key="frame" x="37" y="44" width="318" height="633"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UYF-75-Rk0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UYF-75-Rk0" firstAttribute="bottom" secondItem="KeN-zw-xNy" secondAttribute="bottom" id="8ZC-Vt-Zdc"/>
+                            <constraint firstItem="KeN-zw-xNy" firstAttribute="top" secondItem="UYF-75-Rk0" secondAttribute="top" id="A2o-5y-x0u"/>
+                            <constraint firstItem="UYF-75-Rk0" firstAttribute="trailing" secondItem="KeN-zw-xNy" secondAttribute="trailing" id="b1c-jy-O3I"/>
+                            <constraint firstItem="KeN-zw-xNy" firstAttribute="leading" secondItem="UYF-75-Rk0" secondAttribute="leading" id="vKh-8S-iwi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zCW-aT-3Mn"/>
+                    <connections>
+                        <outlet property="viewMain" destination="KeN-zw-xNy" id="YHy-Md-z6B"/>
+                        <outlet property="viewMainWeb" destination="SEm-CO-BO7" id="w6q-YD-yfL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdH-d0-jyn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440" y="-27"/>
+            <point key="canvasLocation" x="1438.9312977099237" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
