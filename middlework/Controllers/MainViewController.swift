@@ -65,7 +65,7 @@ class MainViewController: BaseViewController {
         
         
         // TODO. test
-        let token: String = "fiRH7UlZHE8KrFakIUzirH:APA91bEzX5PhwaObIWOjgjy0UuO1looVtxex6Uix7hlM7LMfDFzBOQ28by_7AN2aVydlMHzmwyreCSNWUh6GiGzgjpjTWIBnTRMbt3E0FsXoD6voXAP7nijHi6eKe1owfZZNR4hqJ-ke"
+        let token: String = "sdsd"
         UserDefaults.standard.set(token, forKey: "fcmToken")
         UserDefaults.standard.synchronize()
         
