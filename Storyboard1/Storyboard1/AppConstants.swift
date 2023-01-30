@@ -11,19 +11,19 @@ extension Constants {
     static let SERVERS = [
         SERVER_LOCAL: [
             "NAME": "로컬",
-            "URL": "http://local"
+            "URL": "http://localhost:9002/app/init"
         ],
         SERVER_DEV: [
             "NAME": "개발",
-            "URL": "https://dev"
+            "URL": "https://gobang.d-neoflat.net/app/init"
         ],
         SERVER_STG: [
             "NAME": "스테이징",
-            "URL": "https://staging"
+            "URL": "https://gobang.t-neoflat.net/app/init"
         ],
         SERVER_PROD: [
             "NAME": "운영",
-            "URL": "https://production"
+            "URL": "https://m.gobang.kr/app/init"
         ]
     ]
 }

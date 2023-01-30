@@ -15,10 +15,7 @@ class InitViewController: BaseViewController {
         
         // Do any additional setup after loading the view.
         let appInfo = AppInfo.shared
-        Utils.Log("appInfo.serverUrl : \(appInfo.serverUrl)")
-
-        appInfo.serverUrl = "http://localhost"
-        Utils.Log("appInfo.serverUrl : \(appInfo.serverUrl)")
+//        appInfo.serverUrl = "http://localhost"
 
         // Optional Binding
         if let appName = appInfo.name,
@@ -35,6 +32,8 @@ class InitViewController: BaseViewController {
         
         
         
+        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,16 +88,16 @@ class InitViewController: BaseViewController {
         Utils.Log("############### gotoMain appInfo.serverUrl : \(appInfo.serverUrl)")
         
         // ##### CASE1. ViewController의 view 바꿔치기
-//        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainVC")
-//
-//        self.navigationController?.viewControllers[0] = mainVC
+        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainVC")
+
+        self.navigationController?.viewControllers[0] = mainVC
         
         // ##### CASE2. ViewController가 다른 ViewController를 호출(present)
-        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
-        mainVC?.modalPresentationStyle = .fullScreen // 전체화면으로 보이게 설정
-        mainVC?.modalTransitionStyle = .crossDissolve // 전환 애니메이션 설정
-
-        self.present(mainVC!, animated: true, completion: nil)
+//        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
+//        mainVC?.modalPresentationStyle = .fullScreen // 전체화면으로 보이게 설정
+//        mainVC?.modalTransitionStyle = .crossDissolve // 전환 애니메이션 설정
+//
+//        self.present(mainVC!, animated: true, completion: nil)
         
         
         // 화면 전환 애니메이션 설정
@@ -126,3 +125,4 @@ class InitViewController: BaseViewController {
         
     }
 }
+

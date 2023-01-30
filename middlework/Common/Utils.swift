@@ -19,10 +19,15 @@ class Utils {
     public static func Log<T>(_ object: T?, filename: String = #file, line: Int = #line, funcName: String = #function) {
         #if DEBUG
         // Optional Binding
+//        if let obj = object {
+//            print("\(Date()) \(filename.components(separatedBy: "/").last ?? "")(\(line)) : \(funcName) : \(obj)")
+//        } else {
+//            print("\(Date()) \(filename.components(separatedBy: "/").last ?? "")(\(line)) : \(funcName) : nil")
+//        }
         if let obj = object {
-            print("\(Date()) \(filename.components(separatedBy: "/").last ?? "")(\(line)) : \(funcName) : \(obj)")
+            print("\(filename.components(separatedBy: "/").last ?? "")(\(line)) : \(funcName) : \(obj)")
         } else {
-            print("\(Date()) \(filename.components(separatedBy: "/").last ?? "")(\(line)) : \(funcName) : nil")
+            print("\(filename.components(separatedBy: "/").last ?? "")(\(line)) : \(funcName) : nil")
         }
         #endif
     }
